@@ -37,7 +37,7 @@ public class Employee {
      * @return true if employee is present, false otherwise
      */
     public boolean isPresent() {
-        Random random = new Random(2);
-        return random.nextInt() == 1;
+        Random random = new Random();
+        return random.nextInt(2) == 1;
     }
 }
