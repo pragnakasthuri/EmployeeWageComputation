@@ -2,10 +2,6 @@ package com.bridgelabz;
 
 import java.util.Random;
 
-enum EmployeeType {
-    FULL_TIME,
-    PART_TIME
-}
 /**
  * Employee class to deal with employee related data
  */
@@ -30,6 +26,10 @@ public class Employee {
 
     public int getWagePerHr() {
         return wagePerHr;
+    }
+
+    public EmployeeType getEmployeeType() {
+        return employeeType;
     }
 
     /**
