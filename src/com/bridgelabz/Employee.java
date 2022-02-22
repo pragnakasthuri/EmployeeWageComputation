@@ -2,12 +2,35 @@ package com.bridgelabz;
 
 import java.util.Random;
 
+enum EmployeeType {
+    FULL_TIME,
+    PART_TIME
+}
 /**
  * Employee class to deal with employee related data
  */
 public class Employee {
-    private int empId;
-    private String empName;
+    private EmployeeType employeeType;
+    private int empHrs;
+    private int wagePerHr;
+
+    Employee(EmployeeType employeeType, int empHrs, int wagePerHr) {
+        this.employeeType = employeeType;
+        this.empHrs = empHrs;
+        this.wagePerHr = wagePerHr;
+    }
+
+    Employee() {
+
+    }
+
+    public int getEmpHrs() {
+        return empHrs;
+    }
+
+    public int getWagePerHr() {
+        return wagePerHr;
+    }
 
     /**
      * This method will check whether the given employee is prent or absent
