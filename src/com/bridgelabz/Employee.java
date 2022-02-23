@@ -9,6 +9,7 @@ public class Employee {
     private EmployeeType employeeType;
     private int empHrs;
     private int wagePerHr;
+    private int totalNoOfWorkingDays;
 
     Employee(EmployeeType employeeType, int empHrs, int wagePerHr) {
         this.employeeType = employeeType;
@@ -32,12 +33,25 @@ public class Employee {
         return employeeType;
     }
 
+    public int getTotalNoOfWorkingDays() {
+        return totalNoOfWorkingDays;
+    }
+
+    public void setEmpHrs(int empHrs) {
+        this.empHrs = empHrs;
+    }
+
     /**
      * This method will check whether the given employee is prent or absent
      * @return true if employee is present, false otherwise
      */
     public boolean isPresent() {
         Random random = new Random();
-        return random.nextInt(2) == 1;
+        int isPresent = random.nextInt(2);
+        if (isPresent == 1) {
+            this.totalNoOfWorkingDays++;
+            return true;
+        }
+        return false;
     }
 }
