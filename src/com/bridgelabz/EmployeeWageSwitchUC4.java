@@ -8,7 +8,7 @@ public class EmployeeWageSwitchUC4 {
         Employee fullTimeEmployee = new Employee(EmployeeType.FULL_TIME, 8, 20);
         Employee partTimeEmployee = new Employee(EmployeeType.PART_TIME, 4, 20);
         /**
-         * Using switch case to calculate
+         * Using switch case to calculate full time and part time employee wage
          */
         switch (fullTimeEmployee.getEmployeeType()) {
             case FULL_TIME:

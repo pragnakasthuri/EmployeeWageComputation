@@ -1,3 +1,6 @@
+/**
+ * Calculating employee wage per month
+ */
 package com.bridgelabz;
 
 public class EmployeeMonthlyWageUC5 {
